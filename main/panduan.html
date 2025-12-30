@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan</title>
+    <link rel="stylesheet" href="../Style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar-content">
+            <div class="header-title">
+            <h1>Kalkulator Zakat</h1>
+        </div>
+<button id="hamburger" class="burger">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="overlay" class="overlay"></div>
+    
+    <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">Menu</h2>
+                <button id="close-sidebar" class="close-btn"><i class="fa-solid fa-times"></i></button>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="../index.html"><i class="fa-solid fa-calculator"></i> Kalkulator</a>
+                <a href="../main/panduan.html"><i class="fa-solid fa-book-open"></i> Panduan</a>
+                <a href="../main/hukum.html"><i class="fa-solid fa-scale-balanced"></i> Hukum & Dalil</a>
+                <a href="../main/tabel.html"><i class="fa-solid fa-table"></i> Tabel Kebenaran</a>
+                <a href="../main/algoritma.html"><i class="fa-solid fa-code"></i> Algoritma</a>
+                <a href="../main/about.html"><i class="fa-solid fa-circle-info"></i> About Me</a>
+            </nav>
+        </aside>
+    <main class="main-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Panduan Penggunaan</h2>
+                    <p class="subtitle">Langkah mudah menghitung kewajiban zakat Kamu.</p>
+                </div>
+
+                <div class="guide-container">
+                    
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3><i class="fa-solid fa-hand-pointer text-blue"></i> Pilih Jenis Zakat</h3>
+                            <p>Pada halaman utama, pilih jenis zakat yang ingin dihitung: <b>Zakat Mal</b> (Harta) atau <b>Zakat Fitrah</b>.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3><i class="fa-solid fa-pen-to-square text-blue"></i> Masukkan Data</h3>
+                            <p>
+                                Jika memilih <b>Zakat Mal</b>, centang kotak harta yang Kamu miliki (Emas, Tabungan, dll), lalu isi nominal harta dan haul (lama simpan).
+                                <br><small class="text-muted">*Input hanya muncul setelah kotak dicentang.</small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3><i class="fa-solid fa-calculator text-blue"></i> Hitung Kewajiban</h3>
+                            <p>Klik tombol <b>"Hitung Kewajiban"</b>. Sistem akan otomatis mengecek apakah harta Kamu sudah mencapai Nishab (batas minimal) dan Haul (1 tahun).</p>
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3><i class="fa-solid fa-users text-blue"></i> Distribusi (Opsional)</h3>
+                            <p>Jika terbukti <b>Wajib Zakat</b>, menu distribusi akan muncul. Pilih golongan penerima (Mustahik) untuk membagi rata dana zakat.</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <hr class="divider">
+                
+                <div class="center-text">
+                    <a href="../index.html" class="button-primary" style="text-decoration: none; display: inline-block;">
+                        Mulai !!
+                    </a>
+                </div>
+
+            </div>
+        </main>
+</body>
+<script src="../js/script.js"></script>
+</html>

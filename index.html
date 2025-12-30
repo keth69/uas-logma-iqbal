@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Zakat</title>
+    <link rel="stylesheet" href="Style/styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="navbar-content">
+            <div class="header-title">
+                <h1>Kalkulator Zakat</h1>
+            </div>
+            <button id="hamburger" class="burger">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="overlay" class="overlay"></div>
+    
+<aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2 class="sidebar-title">Menu</h2>
+            <button id="close-sidebar" class="close-btn"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="../index.html"><i class="fa-solid fa-calculator"></i> Kalkulator</a>
+            <a href="../main/panduan.html"><i class="fa-solid fa-book-open"></i> Panduan</a>
+            <a href="../main/hukum.html"><i class="fa-solid fa-scale-balanced"></i> Hukum & Dalil</a>
+            <a href="../main/tabel.html"><i class="fa-solid fa-table"></i> Tabel Kebenaran</a>
+            <a href="../main/algoritma.html"><i class="fa-solid fa-code"></i> Algoritma</a>
+            <a href="../main/about.html"><i class="fa-solid fa-circle-info"></i> About Me</a>
+        </nav>
+    </aside>
+
+    <main id="main-content" class="main-content">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Kalkulator Zakat</h2>
+            </div>
+            <div class="selection-box">
+                <h3 class="section-title">Pilih Jenis Zakat :</h3>
+                <div class="radio-options">
+                    <label class="radio-label">
+                        <input type="radio" name="jeniszakat" id="mal" value="zakat-mal">
+                        <span>Zakat Mal</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="jeniszakat" id="fitrah" value="zakat-fitrah">
+                        <span>Zakat Fitrah</span>
+                    </label>
+                </div>
+            </div>
+
+            <div id="container-mal" class="hidden">
+                <h4 class="category-label">Kategori Harta</h4>
+                <div class="grid-container"></div>
+
+                <div class="input-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="emas">
+                        <span>Zakat Emas</span>
+                    </label> 
+                    <div id="emasSection" class="sub-hidden">
+                        <p class="input-hint">Berat (Gram) & Haul (Tahun)</p>
+                        <input type="number" id="beratEmas" placeholder="Gram" class="form-input">
+                        <input type="number" id="haulEmas" placeholder="Tahun" class="form-input">
+                    </div>   
+                </div>
+
+                <div class="input-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="penghasilan">
+                        <span>Zakat penghasilan</span>
+                    </label>
+                    <div id="penghasilanSection" class="sub-hidden">
+                        <p class="input-hint">Total Gaji Per Bulan</p>
+                        <input type="number" id="gaji" placeholder="Gaji Bulanan (Rupiah)" class="form-input">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="pertanian">
+                        <span>Zakat Pertanian</span>
+                    </label>
+                    <div id="pertanianSection" class="sub-hidden">
+                        <p class="input-hint">Berat Hasil Panen</p>
+                        <input type="number" id="hasilPertanian" placeholder="Hasil Pertanian (Kg)" class="form-input">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="uang">
+                        <span>Zakat Uang/Tabungan</span>
+                    </label>
+                    <div id="uangSection" class="sub-hidden">
+                        <p class="input-hint">Saldo Akhir & Lama Simpan</p>
+                        <input type="number" id="totalUang" placeholder="Total Uang/Tabungan (Rupiah)" class="form-input">
+                        <input type="number" id="lamaSimpan" placeholder="Haul (Tahun)" class="form-input">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="niaga">
+                        <span>Zakat Perniagaan</span>
+                    </label>
+                    <div id="niagaSection" class="sub-hidden">
+                        <p class="input-hint">Aset, Laba, Hutang & Haul</p>
+                        <input type="number" id="asetNiaga" placeholder="Total Aset (Rupiah)" class="form-input">
+                        <input type="number" id="labaNiaga" placeholder="Laba Bersih (Rupiah)" class="form-input">
+                        <input type="number" id="hutangNiaga" placeholder="Total Hutang (Rupiah)" class="form-input">
+                        <input type="number" id="haulNiaga" placeholder="Haul (Tahun)" class="form-input">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="temuan">
+                        <span>Zakat Temuan</span>
+                    </label>
+                    <div id="temuanSection" class="sub-hidden">
+                        <p class="input-hint">Nilai Barang Temuan</p>
+                        <input type="number" id="nilaiTemuan" placeholder="Nilai Barang Temuan (Rupiah)" class="form-input">
+                    </div>
+                </div>
+            </div>
+
+            <div id="container-fitrah" class="hidden">
+                <hr class="divider">
+                <div class="fitrah-box">
+                    <h4 class="category-label">Zakat Fitrah</h4>
+                    <input type="number" id="jumlahJiwa" placeholder="0" class="form-input fitrah-input">
+                    <p class="input-hint">Termasuk Diri Sendiri & Tanggungan</p>
+                </div>
+            </div>
+
+            <div class="action-area">
+                <button onclick="cekZakat()" class="button-primary">
+                    <i class="fa-solid fa-calculator"></i> Hitung Kewajiban
+                </button>
+            </div>
+
+            <div id="hasil" class="result-box"></div>
+
+            <div class="logic-box">
+                <p class="logic-title"><i class="fa-solid fa-brain icon-purple"></i> Logika & Penjelasan:</p>
+                <div id="penjelasan">Belum ada perhitungan.</div>
+            </div>
+        </div>
+        <div id="container-distribusi" class="hidden"> <h3 class="section-title"><i class="fa-solid fa-hand-holding-heart icon-red"></i> Distribusi Zakat</h3>
+            <p class="mb-medium">Dana Tersedia: <b class="text-blue"><span id="totalZakatDistribusi">Rp 0</span></b></p>
+            <p class="text-sm mb-small">Pilih Golongan (Mustahik) :</p>
+            <div class="grid-check">
+                <label class="check-card"><input type="checkbox" class="mustahik-check" value="Fakir"> Fakir</label>
+                <label class="check-card"><input type="checkbox" class="mustahik-check" value="Miskin"> Miskin</label>
+                <label class="check-card"><input type="checkbox" class="mustahik-check" value="Amil"> Amil</label>
+                <label class="check-card"><input type="checkbox" class="mustahik-check" value="Muallaf"> Muallaf</label>
+                <label class="check-card"><input type="checkbox" class="mustahik-check" value="Riqab"> Riqab</label>
+                <label class="check-card"><input type="checkbox" class="mustahik-check" value="Gharim"> Gharim</label>
+                <label class="check-card"><input type="checkbox" class="mustahik-check" value="Sabilillah"> Fi Sabilillah</label>
+                <label class="check-card"><input type="checkbox" class="mustahik-check" value="Ibnu Sabil"> Ibnu Sabil</label>
+            </div>
+            
+            <button onclick="distribusikanZakat()" class="button-success mt-medium">
+                <i class="fas fa-users"></i> Distribusikan Zakat
+            </button>
+
+            <div id="hasilDistribusi" class="result-box"></div>
+            <div id="penjelasanlogikaDistribusi" class="logic-box hidden"></div>
+        </div>
+        </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
